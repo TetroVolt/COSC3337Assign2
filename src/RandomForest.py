@@ -10,16 +10,14 @@ from data_prep import (
   partition_into_training_and_testing)
 
 def grid_search_for_best_random_forest(x_train, y_train):
-  base_model = RandomForestClassifier()
+  base_model = RandomForestClassifier(random_state=42)
   parameters = {
-    'n_estimators':[10, 20, 30, 40],
+    'n_estimators':[10, 25, 50],
     'criterion':['gini', 'entropy'],
-    'max_depth':[1, 2, 3, 4, "None"],
-    'max_leaf_nodes': [2, 4, 8, 16],
+    'max_depth':[1, 5, 10],
+    'max_leaf_nodes': [8, 32, 64],
     'min_samples_split': [2, 5, 10],
-    'min_samples_leaf': [1, 10, 30, 50],
-    'bootstrap': [True, False],
-    'random_state': [42]
+    'min_samples_leaf': [1, 10, 30],
   }
 
   grid_search_results = GridSearchCV(
