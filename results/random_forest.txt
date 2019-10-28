@@ -1,4 +1,4 @@
-Fitting 10 folds for each of 216 candidates, totalling 2160 fits
+Fitting 10 folds for each of 9 candidates, totalling 90 fits
 
   Dataset characteristics:
   Number of examples in the dataset = 3190
@@ -8,9 +8,9 @@ Fitting 10 folds for each of 216 candidates, totalling 2160 fits
   N features : 60, all categorical (DNA base pairs in 60 base pair long sequence)
   
 
-  Grid Search parameter space for Random Forest = {'n_estimators': [50, 100, 150], 'max_depth': [1, 3, 5, 10], 'min_samples_split': [2, 10, 30], 'min_samples_leaf': [1, 10, 30], 'bootstrap': [True, False]}
-  best estimator parameters found = {'bootstrap': False, 'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 150}
-  best estimator mean training score   = 0.9946882314304826
-  best estimator mean validation score = 0.9090909090909091
-  best estimator test score            = 0.9278996865203761
+  Grid Search parameter space for Random Forest = {'n_estimators': [50, 100, 150], 'max_depth': [3, 5, 8]}
+  best estimator parameters found = {'max_depth': 8, 'n_estimators': 100}
+  best estimator mean training score   = 0.949886877141674
+  best estimator mean validation score = 0.8726489028213166
+  best estimator test score            = 0.8871473354231975
   

@@ -78,12 +78,9 @@ if __name__ == '__main__':
   X_train, X_test, y_train, y_test = partition_into_training_and_testing(X, y, random_state=0)
 
   grid_search_parameters = {
-    'n_estimators':[50, 100, 150],
     #'criterion':['gini', 'entropy'],
-    'max_depth':[1, 3, 5, 10],
-    'min_samples_split': [2, 10, 30],
-    'min_samples_leaf': [1, 10, 30],
-    'bootstrap': [True, False],
+    'n_estimators':[50, 100, 150],
+    'max_depth': [3, 5, 8],
   }
 
   grid_search_results = grid_search_for_best_random_forest(grid_search_parameters, X_train, y_train)
