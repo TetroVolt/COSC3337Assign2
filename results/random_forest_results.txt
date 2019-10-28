@@ -1,0 +1,16 @@
+Fitting 10 folds for each of 108 candidates, totalling 1080 fits
+
+  Dataset characteristics:
+  Number of examples in the dataset = 3190
+  Number of examples reserved for test set = 638
+  Number of examples reserved for training via 10 fold CV = 2552
+  Class Distribution Ratio (N : EI : IE) = 2 : 1 : 1
+  N features : 60, all categorical (DNA base pairs in 60 base pair long sequence)
+  
+
+  Grid Search parameter space for Random Forest = {'n_estimators': [10, 25, 50], 'max_depth': [1, 5, 10, 40], 'min_samples_split': [2, 5, 10], 'min_samples_leaf': [1, 10, 30]}
+  best estimator parameters found = {'max_depth': 40, 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 50}
+  best estimator mean training score   = 0.9995210765746567
+  best estimator mean validation score = 0.9000783699059561
+  best estimator test score            = 0.9090909090909091
+  
