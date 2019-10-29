@@ -8,6 +8,7 @@ from data_prep import (
   preprocess_data_and_get_X_and_y,
   partition_into_training_and_testing)
 from RandomForest import print_data_info
+import datetime
 
 # Takes nparray with shape (n,3) produced by partition_into_training_and_testing
 def reformatTargetForSVC(target: np.ndarray):
@@ -85,24 +86,37 @@ param_grid3 = [
    'degree':[2,3,4,5,6,7,8]}
 ]
 
-gridSearchResults = gridSearchSVC(param_grid3, X_train, y_train_format)
+param_grid4 = [
+  {'C': [1, 10, 100, 1000], 
+   'gamma': [0.001, 0.0001], 
+   'kernel': ['poly'], 
+   'degree':[2,3,4,5]}
+]
 
-"""
-GridSearchCV(cv=10, error_score='raise',
-             estimator=SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
-                           decision_function_shape='ovr', degree=3,
-                           gamma='auto_deprecated', kernel='rbf', max_iter=-1,
-                           probability=False, random_state=0, shrinking=True,
-                           tol=0.001, verbose=False),
-             iid='warn', n_jobs=4,
-             param_grid=[{'C': [1, 10, 100, 1000],
-                          'degree': [2, 3, 4, 5, 6, 7, 8],
-                          'gamma': [0.01, 0.001, 0.0001, 'auto'],
-                          'kernel': ['linear', 'poly', 'rbf']}],
-             pre_dispatch='2*n_jobs', refit=True, return_train_score=True,
-             scoring=None, verbose=0)
-0.9702194357366771
-"""
+param_grid5 = [
+  {'C': [1, 10, 100], 
+   'gamma': [0.001, 0.0001], 
+   'kernel': ['poly'], 
+   'degree':[2,3,4,5]}
+]
+
+param_grid6 = [
+  {'C': [1, 10], 
+   'gamma': [0.001, 0.0001], 
+   'kernel': ['poly'], 
+   'degree':[2,3,4,5]}
+]
+
+param_grid7 = [
+  {'C': [1, 10, 100 ,1000], 
+   'gamma': [0.001, 0.0001], 
+   'kernel': ['poly'], 
+   'degree':[2,3,4,5]}
+]
+
+startTime = datetime.datetime.now()
+gridSearchResults = gridSearchSVC(param_grid7, X_train, y_train_format)
+processTime = datetime.datetime.now() - startTime
 
 best_est = gridSearchResults.best_estimator_
 trainingScore = best_est.score(X_train, y_train_format)
@@ -110,4 +124,4 @@ testingScore = best_est.score(X_test, y_test_format)
 
 printStatistics(gridSearchResults, testingScore)
 print_data_info(X.shape[0], X_test.shape[0], X_train.shape[0])
-
+print("Process Time\t\t= " + str(processTime/60) + " Minutes")
