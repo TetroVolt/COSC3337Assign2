@@ -158,6 +158,24 @@ grid = GridSearchCV(estimator=clf3,
                     ).fit(X_train, y_train_format)
 
 print(grid)
+
+"""
+GridSearchCV(cv=10, error_score='raise',
+             estimator=SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
+                           decision_function_shape='ovr', degree=3,
+                           gamma='auto_deprecated', kernel='rbf', max_iter=-1,
+                           probability=False, random_state=0, shrinking=True,
+                           tol=0.001, verbose=False),
+             iid='warn', n_jobs=4,
+             param_grid=[{'C': [1, 10, 100, 1000],
+                          'degree': [2, 3, 4, 5, 6, 7, 8],
+                          'gamma': [0.01, 0.001, 0.0001, 'auto'],
+                          'kernel': ['linear', 'poly', 'rbf']}],
+             pre_dispatch='2*n_jobs', refit=True, return_train_score=True,
+             scoring=None, verbose=0)
+0.9702194357366771
+"""
+
 print(grid.score(X_test, y_test_format))
 
 best_est = grid.best_estimator_
