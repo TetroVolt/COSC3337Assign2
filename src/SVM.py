@@ -32,7 +32,8 @@ def gridSearchSVC(params, x_train, y_train):
                         return_train_score=True,
                         error_score='raise',
                         n_jobs=4,
-                        cv=10
+                        cv=10,
+                        verbose=1
             ).fit(X_train, y_train)
 
 # Print the statistics of the GridSearch
@@ -66,56 +67,14 @@ y_train_format = reformatTargetForSVC(y_train)
 y_test_format = reformatTargetForSVC(y_test)
 
 param_grid = [
-  {'C': [1, 10, 100, 1000], 
-   'gamma': [0.01, 0.001, 0.0001, 'auto'], 
-   'kernel': ['linear','poly','rbf'], 
-   'degree':[2,3,4,5,6,7,8]}
-]
-
-param_grid2 = [
-  {'C': [1, 10, 100, 1000], 
-   'gamma': [0.001, 0.0001], 
-   'kernel': ['linear','poly','rbf'], 
-   'degree':[2,3,4,5,6,7,8]}
-]
-
-param_grid3 = [
-  {'C': [1, 10, 100, 1000], 
-   'gamma': [0.001, 0.0001], 
+  {'C': [100, 1000, 10000], 
+   'gamma': [0.01, 0.001], 
    'kernel': ['poly','rbf'], 
-   'degree':[2,3,4,5,6,7,8]}
-]
-
-param_grid4 = [
-  {'C': [1, 10, 100, 1000], 
-   'gamma': [0.001, 0.0001], 
-   'kernel': ['poly'], 
-   'degree':[2,3,4,5]}
-]
-
-param_grid5 = [
-  {'C': [1, 10, 100], 
-   'gamma': [0.001, 0.0001], 
-   'kernel': ['poly'], 
-   'degree':[2,3,4,5]}
-]
-
-param_grid6 = [
-  {'C': [1, 10], 
-   'gamma': [0.001, 0.0001], 
-   'kernel': ['poly'], 
-   'degree':[2,3,4,5]}
-]
-
-param_grid7 = [
-  {'C': [1, 10, 100 ,1000], 
-   'gamma': [0.001, 0.0001], 
-   'kernel': ['poly'], 
-   'degree':[2,3,4,5]}
+   'degree':[2,3,4]}
 ]
 
 startTime = datetime.datetime.now()
-gridSearchResults = gridSearchSVC(param_grid7, X_train, y_train_format)
+gridSearchResults = gridSearchSVC(param_grid, X_train, y_train_format)
 processTime = datetime.datetime.now() - startTime
 
 best_est = gridSearchResults.best_estimator_
