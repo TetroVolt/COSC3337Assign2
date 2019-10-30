@@ -1,0 +1,48 @@
+Fitting 10 folds for each of 24 candidates, totalling 240 fits
+
+  Dataset characteristics:
+  Number of examples in the dataset = 3190
+  Number of examples reserved for test set = 638
+  Number of examples reserved for training via 10 fold CV = 2552
+  Class Distribution Ratio (N : EI : IE) = 2 : 1 : 1
+  N features : 60, all categorical (DNA base pairs in 60 base pair long sequence)
+  
+
+  Grid Search parameter space for Random Forest = {'n_estimators': [25, 50, 100, 150], 'max_depth': [2, 4, 8, 16, 32, 64]}
+  best estimator parameters found = {'max_depth': 32, 'n_estimators': 150}
+  best estimator mean training score   = 0.9995646116203684
+  best estimator mean validation score = 0.9114420062695925
+  best estimator test score            = 0.9247648902821317
+  
+Fitting 10 folds for each of 24 candidates, totalling 240 fits
+
+  Dataset characteristics:
+  Number of examples in the dataset = 3190
+  Number of examples reserved for test set = 1595
+  Number of examples reserved for training via 10 fold CV = 1595
+  Class Distribution Ratio (N : EI : IE) = 2 : 1 : 1
+  N features : 60, all categorical (DNA base pairs in 60 base pair long sequence)
+  
+
+  Grid Search parameter space for Random Forest = {'n_estimators': [25, 50, 100, 150], 'max_depth': [2, 4, 8, 16, 32, 64]}
+  best estimator parameters found = {'max_depth': 16, 'n_estimators': 100}
+  best estimator mean training score   = 0.9992337891743421
+  best estimator mean validation score = 0.8915360501567398
+  best estimator test score            = 0.8984326018808777
+  
+Fitting 10 folds for each of 24 candidates, totalling 240 fits
+
+  Dataset characteristics:
+  Number of examples in the dataset = 3190
+  Number of examples reserved for test set = 2233
+  Number of examples reserved for training via 10 fold CV = 957
+  Class Distribution Ratio (N : EI : IE) = 2 : 1 : 1
+  N features : 60, all categorical (DNA base pairs in 60 base pair long sequence)
+  
+
+  Grid Search parameter space for Random Forest = {'n_estimators': [25, 50, 100, 150], 'max_depth': [2, 4, 8, 16, 32, 64]}
+  best estimator parameters found = {'max_depth': 16, 'n_estimators': 100}
+  best estimator mean training score   = 1.0
+  best estimator mean validation score = 0.8610240334378265
+  best estimator test score            = 0.8669950738916257
+  

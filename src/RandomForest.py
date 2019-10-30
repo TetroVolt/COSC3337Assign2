@@ -80,17 +80,21 @@ if __name__ == '__main__':
 
   data_set = read_dataset_from_csv(file_name)
   X, y = preprocess_data_and_get_X_and_y(data_set)
-  X_train, X_test, y_train, y_test = partition_into_training_and_testing(X, y, random_state=0)
-
   grid_search_parameters = {
     #'criterion':['gini', 'entropy'],
-    'n_estimators':[50, 100, 150],
-    'max_depth': [3, 5, 8],
+    'n_estimators':[25, 50, 100, 150],
+    'max_depth': [2, 4, 8, 16, 32, 64],
   }
 
-  grid_search_results = grid_search_for_best_random_forest(grid_search_parameters, X_train, y_train)
-  best_estimator = grid_search_results.best_estimator_
-  test_score = best_estimator.score(X_test, y_test)
 
-  print_data_info(X.shape[0], X_test.shape[0], X_train.shape[0])
-  print_statistics(grid_search_results, test_score)
+  for test_portion in [0.2, 0.5, 0.7]:
+    X_train, X_test, y_train, y_test = partition_into_training_and_testing(X, y, random_state=0, test_size=test_portion)
+
+    grid_search_results = grid_search_for_best_random_forest(grid_search_parameters, X_train, y_train)
+    best_estimator = grid_search_results.best_estimator_
+    test_score = best_estimator.score(X_test, y_test)
+
+    print_data_info(X.shape[0], X_test.shape[0], X_train.shape[0])
+    print_statistics(grid_search_results, test_score)
+
+
