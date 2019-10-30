@@ -71,6 +71,11 @@ def print_data_info(n_examples, n_test_examples, n_training_examples):
 
 if __name__ == '__main__':
   import sys
+  if len(sys.argv) < 2:
+    print('ERROR!!! Missing argument: data set')
+    print('Proper usage -> $ python RandomForest.py splice.data.csv\n')
+    exit(1)
+
   file_name = sys.argv[1]
 
   data_set = read_dataset_from_csv(file_name)
