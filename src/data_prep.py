@@ -28,8 +28,8 @@ def preprocess_data_and_get_X_and_y(data_set: pd.DataFrame):
 
   return features, labels
 
-def partition_into_training_and_testing(X, y, random_state=0):
-  return train_test_split(X, y, test_size=0.2, random_state=random_state)
+def partition_into_training_and_testing(X, y, random_state=0, test_size=0.2):
+  return train_test_split(X, y, test_size=test_size, random_state=random_state)
 
 def __MAIN__(args: List[str]):
   print(args)
