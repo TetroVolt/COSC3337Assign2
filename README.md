@@ -1,4 +1,4 @@
-### Assignment 2
+# Assignment 2
 
 This project uses python. The requirements are listed in requirements.txt
 
@@ -7,8 +7,8 @@ To install just do
 ``` $ pip install -r requirements.txt ```
 
 
-## Contributions
-# Raymond Sutrisno contributions
+# Contributions
+### Raymond Sutrisno contributions
 data_prep.py - utility file for common functions
 RandomForest.py - file that actually runs the random forest tests
 
