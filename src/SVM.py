@@ -42,20 +42,24 @@ def printStatistics(results: GridSearchCV, testScore):
     """
     Grid Search parameter space for SVM = $grid_search_params
     best estimator parameters found = $best_params
-    best estimator mean training score   = $mean_train_score
-    best estimator mean validation score = $mean_validation_score
+    best estimator mean training score   = $mean_train_score +/- $std_train_score
+    best estimator mean validation score = $mean_validation_score +/- $std_validation_score
     best estimator test score            = $test_score
     """)
     
     param_index = results.cv_results_['params'].index(results.best_params_)
     mean_train_score = results.cv_results_['mean_train_score'][param_index]
+    std_train_score = results.cv_results_['std_train_score'][param_index]
     mean_validation_score = results.cv_results_['mean_test_score'][param_index]
+    std_validation_score = results.cv_results_['std_test_score'][param_index]
 
     print(output_template.substitute(
         grid_search_params = results.param_grid,
         best_params = results.best_params_,
         mean_train_score = mean_train_score,
+        std_train_score = std_train_score,
         mean_validation_score = mean_validation_score,
+        std_validation_score = std_validation_score,
         test_score = testScore
     ))
 
