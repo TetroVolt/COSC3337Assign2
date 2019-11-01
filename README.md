@@ -15,3 +15,6 @@ RandomForest.py - file that actually runs the random forest tests
 data_prep.py is copied everywhere because of the assignment requirements to 
 have separete folders when we originally had individual files in an src folder.
 I wrote data_prep to standardized the output format to by the program and standardize procedures
+
+### Colby Kuhnel contrabutions
+SVM.py - running file for SVM tests
