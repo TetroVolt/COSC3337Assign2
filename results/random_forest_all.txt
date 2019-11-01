@@ -8,11 +8,11 @@ Fitting 10 folds for each of 24 candidates, totalling 240 fits
   N features : 60, all categorical (DNA base pairs in 60 base pair long sequence)
   
 
-  Grid Search parameter space for Random Forest = {'n_estimators': [25, 50, 100, 150], 'max_depth': [2, 4, 8, 16, 32, 64]}
-  best estimator parameters found = {'max_depth': 32, 'n_estimators': 150}
-  best estimator mean training score   = 0.9995646116203684
-  best estimator mean validation score = 0.9114420062695925
-  best estimator test score            = 0.9247648902821317
+  Grid Search parameter space for Random Forest = {'n_estimators': [25, 50, 100, 150], 'max_depth': [2, 4, 8], 'bootstrap': [True, False]}
+  best estimator parameters found = {'bootstrap': False, 'max_depth': 8, 'n_estimators': 100}
+  best estimator mean training score   = 0.9576366082710519 +/- 0.002902763155546045
+  best estimator mean validation score = 0.8832288401253918 +/- 0.019584724402208296
+  best estimator test score            = 0.8981191222570533
   
 Fitting 10 folds for each of 24 candidates, totalling 240 fits
 
@@ -24,11 +24,11 @@ Fitting 10 folds for each of 24 candidates, totalling 240 fits
   N features : 60, all categorical (DNA base pairs in 60 base pair long sequence)
   
 
-  Grid Search parameter space for Random Forest = {'n_estimators': [25, 50, 100, 150], 'max_depth': [2, 4, 8, 16, 32, 64]}
-  best estimator parameters found = {'max_depth': 16, 'n_estimators': 100}
-  best estimator mean training score   = 0.9992337891743421
-  best estimator mean validation score = 0.8915360501567398
-  best estimator test score            = 0.8984326018808777
+  Grid Search parameter space for Random Forest = {'n_estimators': [25, 50, 100, 150], 'max_depth': [2, 4, 8], 'bootstrap': [True, False]}
+  best estimator parameters found = {'bootstrap': False, 'max_depth': 8, 'n_estimators': 150}
+  best estimator mean training score   = 0.9796590898061786 +/- 0.0034911533590558635
+  best estimator mean validation score = 0.8608150470219436 +/- 0.02794525017734632
+  best estimator test score            = 0.8714733542319749
   
 Fitting 10 folds for each of 24 candidates, totalling 240 fits
 
@@ -40,9 +40,9 @@ Fitting 10 folds for each of 24 candidates, totalling 240 fits
   N features : 60, all categorical (DNA base pairs in 60 base pair long sequence)
   
 
-  Grid Search parameter space for Random Forest = {'n_estimators': [25, 50, 100, 150], 'max_depth': [2, 4, 8, 16, 32, 64]}
-  best estimator parameters found = {'max_depth': 16, 'n_estimators': 100}
-  best estimator mean training score   = 1.0
-  best estimator mean validation score = 0.8610240334378265
-  best estimator test score            = 0.8669950738916257
+  Grid Search parameter space for Random Forest = {'n_estimators': [25, 50, 100, 150], 'max_depth': [2, 4, 8], 'bootstrap': [True, False]}
+  best estimator parameters found = {'bootstrap': False, 'max_depth': 8, 'n_estimators': 50}
+  best estimator mean training score   = 0.9914085763330286 +/- 0.0028058369152638377
+  best estimator mean validation score = 0.845350052246604 +/- 0.03150452320465402
+  best estimator test score            = 0.8540080609046127
   
