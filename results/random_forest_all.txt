@@ -1,0 +1,48 @@
+Fitting 10 folds for each of 24 candidates, totalling 240 fits
+
+  Dataset characteristics:
+  Number of examples in the dataset = 3190
+  Number of examples reserved for test set = 638
+  Number of examples reserved for training via 10 fold CV = 2552
+  Class Distribution Ratio (N : EI : IE) = 2 : 1 : 1
+  N features : 60, all categorical (DNA base pairs in 60 base pair long sequence)
+  
+
+  Grid Search parameter space for Random Forest = {'n_estimators': [25, 50, 100, 150], 'max_depth': [2, 4, 8], 'bootstrap': [True, False]}
+  best estimator parameters found = {'bootstrap': False, 'max_depth': 8, 'n_estimators': 100}
+  best estimator mean training score   = 0.9576366082710519 +/- 0.002902763155546045
+  best estimator mean validation score = 0.8832288401253918 +/- 0.019584724402208296
+  best estimator test score            = 0.8981191222570533
+  
+Fitting 10 folds for each of 24 candidates, totalling 240 fits
+
+  Dataset characteristics:
+  Number of examples in the dataset = 3190
+  Number of examples reserved for test set = 1595
+  Number of examples reserved for training via 10 fold CV = 1595
+  Class Distribution Ratio (N : EI : IE) = 2 : 1 : 1
+  N features : 60, all categorical (DNA base pairs in 60 base pair long sequence)
+  
+
+  Grid Search parameter space for Random Forest = {'n_estimators': [25, 50, 100, 150], 'max_depth': [2, 4, 8], 'bootstrap': [True, False]}
+  best estimator parameters found = {'bootstrap': False, 'max_depth': 8, 'n_estimators': 150}
+  best estimator mean training score   = 0.9796590898061786 +/- 0.0034911533590558635
+  best estimator mean validation score = 0.8608150470219436 +/- 0.02794525017734632
+  best estimator test score            = 0.8714733542319749
+  
+Fitting 10 folds for each of 24 candidates, totalling 240 fits
+
+  Dataset characteristics:
+  Number of examples in the dataset = 3190
+  Number of examples reserved for test set = 2233
+  Number of examples reserved for training via 10 fold CV = 957
+  Class Distribution Ratio (N : EI : IE) = 2 : 1 : 1
+  N features : 60, all categorical (DNA base pairs in 60 base pair long sequence)
+  
+
+  Grid Search parameter space for Random Forest = {'n_estimators': [25, 50, 100, 150], 'max_depth': [2, 4, 8], 'bootstrap': [True, False]}
+  best estimator parameters found = {'bootstrap': False, 'max_depth': 8, 'n_estimators': 50}
+  best estimator mean training score   = 0.9914085763330286 +/- 0.0028058369152638377
+  best estimator mean validation score = 0.845350052246604 +/- 0.03150452320465402
+  best estimator test score            = 0.8540080609046127
+  

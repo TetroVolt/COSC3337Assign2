@@ -1,0 +1,140 @@
+Grid Search parameter space for SVM = [{'C': [1, 10, 100, 1000], 'gamma': [0.001, 0.0001], 'kernel': ['poly', 'rbf'], 'degree': [2, 3, 4, 5, 6, 7, 8]}]
+    best estimator parameters found = {'C': 1000, 'degree': 2, 'gamma': 0.001, 'kernel': 'poly'}
+    best estimator mean training score   = 0.9996081466330754
+    best estimator mean validation score = 0.963166144200627
+    best estimator test score            = 0.9702194357366771
+	
+Grid Search parameter space for SVM = [{'C': [1, 10, 100, 1000], 'gamma': [0.001, 0.0001], 'kernel': ['poly'], 'degree': [2, 3, 4, 5]}]
+    best estimator parameters found = {'C': 1000, 'degree': 2, 'gamma': 0.001, 'kernel': 'poly'}
+    best estimator mean training score   = 0.9996081466330754
+    best estimator mean validation score = 0.963166144200627
+    best estimator test score            = 0.9702194357366771
+	
+Grid Search parameter space for SVM = [{'C': [1, 10, 100], 'gamma': [0.001, 0.0001], 'kernel': ['poly'], 'degree': [2, 3, 4, 5]}]
+    best estimator parameters found = {'C': 100, 'degree': 2, 'gamma': 0.001, 'kernel': 'poly'}
+    best estimator mean training score   = 0.984848475632645
+    best estimator mean validation score = 0.960423197492163
+    best estimator test score            = 0.9717868338557993
+	
+Grid Search parameter space for SVM = [{'C': [1, 10], 'gamma': [0.001, 0.0001], 'kernel': ['poly'], 'degree': [2, 3, 4, 5]}]
+    best estimator parameters found = {'C': 1, 'degree': 2, 'gamma': 0.001, 'kernel': 'poly'}
+    best estimator mean training score   = 0.5227272675485197
+    best estimator mean validation score = 0.5227272727272727
+    best estimator test score            = 0.5031347962382445
+	
+Grid Search parameter space for SVM = [{'C': [1, 10, 100], 'gamma': [0.0001], 'kernel': ['poly'], 'degree': [2, 3, 4, 5]}]
+    best estimator parameters found = {'C': 1, 'degree': 2, 'gamma': 0.0001, 'kernel': 'poly'}
+    best estimator mean training score   = 0.5227272675485197
+    best estimator mean validation score = 0.5227272727272727
+    best estimator test score            = 0.5031347962382445
+	
+Grid Search parameter space for SVM = [{'C': [1, 10, 100], 'gamma': [0.001, 0.0001], 'kernel': ['poly'], 'degree': [2, 3]}]
+    best estimator parameters found = {'C': 100, 'degree': 2, 'gamma': 0.001, 'kernel': 'poly'}
+    best estimator mean training score   = 0.984848475632645
+    best estimator mean validation score = 0.960423197492163
+    best estimator test score            = 0.9717868338557993
+	
+Grid Search parameter space for SVM = [{'C': [1, 10, 100, 1000], 'gamma': [0.001, 0.0001], 'kernel': ['poly'], 'degree': [2, 3, 4, 5]}]
+    best estimator parameters found = {'C': 1000, 'degree': 2, 'gamma': 0.001, 'kernel': 'poly'}
+    best estimator mean training score   = 0.9996081466330754
+    best estimator mean validation score = 0.963166144200627
+    best estimator test score            = 0.9702194357366771
+	Process Time			             = 0:00:12.482480 Minutes
+	
+Grid Search parameter space for SVM = [{'C': [1, 10, 100], 'gamma': [0.001, 0.0001], 'kernel': ['poly'], 'degree': [2, 3, 4, 5]}]
+    best estimator parameters found = {'C': 100, 'degree': 2, 'gamma': 0.001, 'kernel': 'poly'}
+    best estimator mean training score   = 0.984848475632645
+    best estimator mean validation score = 0.960423197492163
+    best estimator test score            = 0.9717868338557993
+	Process Time        			     = 0:00:08.496429 Minutes
+	
+Grid Search parameter space for SVM = [{'C': [100, 1000, 10000], 'gamma': [0.01, 0.001], 'kernel': ['poly', 'rbf'], 'degree': [2, 3, 4]}]
+    best estimator parameters found = {'C': 100, 'degree': 3, 'gamma': 0.01, 'kernel': 'poly'}
+    best estimator mean training score   = 0.9996081466330754
+    best estimator mean validation score = 0.9678683385579937
+    best estimator test score            = 0.9702194357366771
+	Process Time           				 = 0:00:08.436292 Minutes
+	
+Grid Search parameter space for SVM = [{'C': [1, 10, 100, 1000], 'gamma': [0.001, 0.0001], 'kernel': ['poly', 'rbf', 'linear'], 'degree': [2, 3, 4, 5]}]
+    best estimator parameters found = {'C': 1000, 'degree': 2, 'gamma': 0.001, 'kernel': 'poly'}
+    best estimator mean training score   = 0.9996081466330754
+    best estimator mean validation score = 0.963166144200627
+    best estimator test score            = 0.9702194357366771
+	Process Time        				 = 0:00:21.920080 Minutes
+	
+Grid Search parameter space for SVM = [{'C': [1, 10, 100, 1000], 'gamma': [0.001, 0.0001], 'kernel': ['rbf', 'linear'], 'degree': [2, 3, 4, 5]}]
+    best estimator parameters found = {'C': 10, 'degree': 2, 'gamma': 0.001, 'kernel': 'rbf'}
+    best estimator mean training score   = 0.9754442224275447
+    best estimator mean validation score = 0.957680250783699
+    best estimator test score            = 0.9717868338557993
+	Process Time            			 = 0:00:08.741723 Minutes
+	
+Grid Search parameter space for SVM = [{'C': [1, 10, 100, 1000], 'gamma': [0.001, 0.0001], 'kernel': ['linear'], 'degree': [2, 3, 4, 5]}]
+    best estimator parameters found = {'C': 1, 'degree': 2, 'gamma': 0.001, 'kernel': 'linear'}
+    best estimator mean training score   = 0.9983455543468891
+    best estimator mean validation score = 0.9231974921630094
+    best estimator test score            = 0.9310344827586207
+	Process Time           				 = 0:00:02.537641 Minutes
+	
+Grid Search parameter space for SVM = [{'C': [1, 10, 100], 'gamma': [0.001, 0.0001, 'auto'], 'kernel': ['linear', 'poly', 'rbf'], 'degree': [2, 3, 4]}]
+    best estimator parameters found = {'C': 100, 'degree': 2, 'gamma': 'auto', 'kernel': 'poly'}
+    best estimator mean training score   = 0.997605363713997
+    best estimator mean validation score = 0.9651253918495298
+    best estimator test score            = 0.9702194357366771
+	Process Time           				 = 0:00:17.065216 Minutes
+	
+Grid Search parameter space for SVM = [{'C': [100, 1000, 10000], 'gamma': [0.01, 0.001], 'kernel': ['poly', 'rbf'], 'degree': [2, 3, 4]}]
+    best estimator parameters found = {'C': 100, 'degree': 3, 'gamma': 0.01, 'kernel': 'poly'}
+    best estimator mean training score   = 0.9994427513515088
+    best estimator mean validation score = 0.9605015673981191
+    best estimator test score            = 0.9661442006269593
+	Process Time           				 = 0:00:03.845329 Minutes
+	
+Grid Search parameter space for SVM = [{'C': [100, 1000, 10000], 'gamma': [0.01, 0.001], 'kernel': ['poly', 'rbf'], 'degree': [2, 3, 4]}]
+    best estimator parameters found = {'C': 100, 'degree': 3, 'gamma': 0.01, 'kernel': 'poly'}
+    best estimator mean training score   = 1.0
+    best estimator mean validation score = 0.9540229885057471
+    best estimator test score            = 0.961486789072996
+	Process Time           				 = 0:00:01.603256 Minutes
+	
+Grid Search parameter space for SVM = [{'C': [10, 100, 1000, 10000], 'gamma': [0.1, 0.01, 0.001], 'kernel': ['poly'], 'degree': [2, 3, 4]}]
+    best estimator parameters found = {'C': 10, 'degree': 3, 'gamma': 0.1, 'kernel': 'poly'}
+    best estimator mean training score   = 1.0
+    best estimator mean validation score = 0.9540229885057471
+    best estimator test score            = 0.961486789072996
+	Process Time           				 = 0:00:02.161965 Minutes
+	
+Grid Search parameter space for SVM = [{'C': [10, 100, 1000], 'gamma': [1, 0.1, 0.01, 0.001], 'kernel': ['poly'], 'degree': [2, 3]}]
+    best estimator parameters found = {'C': 10, 'degree': 3, 'gamma': 1, 'kernel': 'poly'}
+    best estimator mean training score   = 0.9996081466330754
+    best estimator mean validation score = 0.9678683385579937
+    best estimator test score            = 0.9702194357366771
+	Process Time           				 = 0:00:07.272073 Minutes
+	
+Grid Search parameter space for SVM = [{'C': [10, 100, 1000], 'gamma': [1, 0.1, 0.01, 0.001], 'kernel': ['poly'], 'degree': [2, 3]}]
+    best estimator parameters found = {'C': 10, 'degree': 3, 'gamma': 1, 'kernel': 'poly'}
+    best estimator mean training score   = 1.0
+    best estimator mean validation score = 0.9540229885057471
+    best estimator test score            = 0.961486789072996
+	Process Time           				 = 0:00:01.361911 Minutes
+	
+Grid Search parameter space for SVM = [{'C': [100, 1000, 10000], 'gamma': [0.01, 0.001], 'kernel': ['poly', 'rbf'], 'degree': [2, 3, 4]}]
+    best estimator parameters found = {'C': 100, 'degree': 3, 'gamma': 0.01, 'kernel': 'poly'}
+    best estimator mean training score   = 1.0 +/- 0.0
+    best estimator mean validation score = 0.9540229885057471 +/- 0.02302451957638207
+    best estimator test score            = 0.961486789072996
+	Process Time           				 = 0:00:01.596190 Minutes
+	
+Grid Search parameter space for SVM = [{'C': [100, 1000, 10000], 'gamma': [0.01, 0.001], 'kernel': ['poly', 'rbf'], 'degree': [2, 3, 4]}]
+    best estimator parameters found = {'C': 100, 'degree': 3, 'gamma': 0.01, 'kernel': 'poly'}
+    best estimator mean training score   = 0.9994427513515088 +/- 0.00027862440348472447
+    best estimator mean validation score = 0.9605015673981191 +/- 0.018196894016891653
+    best estimator test score            = 0.9661442006269593
+	Process Time           				 = 0:00:03.796200 Minutes
+	
+Grid Search parameter space for SVM = [{'C': [100, 1000, 10000], 'gamma': [0.01, 0.001], 'kernel': ['poly', 'rbf'], 'degree': [2, 3, 4]}]
+    best estimator parameters found = {'C': 100, 'degree': 3, 'gamma': 0.01, 'kernel': 'poly'}
+    best estimator mean training score   = 0.9996081466330754 +/- 0.00013061786537545714
+    best estimator mean validation score = 0.9678683385579937 +/- 0.015561908992232719
+    best estimator test score            = 0.9702194357366771
+	Process Time           				 = 0:00:08.422860 Minutes
