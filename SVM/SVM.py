@@ -7,7 +7,6 @@ from data_prep import (
   read_dataset_from_csv,
   preprocess_data_and_get_X_and_y,
   partition_into_training_and_testing)
-from RandomForest import print_data_info
 import datetime
 
 # Takes nparray with shape (n,3) produced by partition_into_training_and_testing
@@ -35,6 +34,24 @@ def gridSearchSVC(params, x_train, y_train):
                         cv=10,
                         verbose=1
             ).fit(X_train, y_train)
+
+# Prints the info on the dataset
+def print_data_info(n_examples, n_test_examples, n_training_examples):
+  from string import Template
+  output_template = Template(
+  """
+  Dataset characteristics:
+  Number of examples in the dataset = $n_examples
+  Number of examples reserved for test set = $n_test_examples
+  Number of examples reserved for training via 10 fold CV = $n_training_examples
+  Class Distribution Ratio (N : EI : IE) = 2 : 1 : 1
+  N features : 60, all categorical (DNA base pairs in 60 base pair long sequence)
+  """)
+  print(output_template.substitute(
+    n_examples=n_examples,
+    n_test_examples=n_test_examples,
+    n_training_examples=n_training_examples
+  ))
 
 # Print the statistics of the GridSearch
 def printStatistics(results: GridSearchCV, testScore):
