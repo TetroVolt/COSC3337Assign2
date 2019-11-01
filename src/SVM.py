@@ -65,7 +65,7 @@ def printStatistics(results: GridSearchCV, testScore):
 
 newDataset = read_dataset_from_csv('..\\datasetSPLICEDNA\\splice.data.csv')
 X, y = preprocess_data_and_get_X_and_y(newDataset)
-X_train, X_test, y_train, y_test = partition_into_training_and_testing(X, y, test_size=0.7)
+X_train, X_test, y_train, y_test = partition_into_training_and_testing(X, y, test_size=0.2)
 
 y_train_format = reformatTargetForSVC(y_train)
 y_test_format = reformatTargetForSVC(y_test)
