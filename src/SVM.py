@@ -42,30 +42,36 @@ def printStatistics(results: GridSearchCV, testScore):
     """
     Grid Search parameter space for SVM = $grid_search_params
     best estimator parameters found = $best_params
-    best estimator mean training score   = $mean_train_score
-    best estimator mean validation score = $mean_validation_score
+    best estimator mean training score   = $mean_train_score +/- $std_train_score
+    best estimator mean validation score = $mean_validation_score +/- $std_validation_score
     best estimator test score            = $test_score
     """)
     
     param_index = results.cv_results_['params'].index(results.best_params_)
     mean_train_score = results.cv_results_['mean_train_score'][param_index]
+    std_train_score = results.cv_results_['std_train_score'][param_index]
     mean_validation_score = results.cv_results_['mean_test_score'][param_index]
+    std_validation_score = results.cv_results_['std_test_score'][param_index]
 
     print(output_template.substitute(
         grid_search_params = results.param_grid,
         best_params = results.best_params_,
         mean_train_score = mean_train_score,
+        std_train_score = std_train_score,
         mean_validation_score = mean_validation_score,
+        std_validation_score = std_validation_score,
         test_score = testScore
     ))
 
 newDataset = read_dataset_from_csv('..\\datasetSPLICEDNA\\splice.data.csv')
 X, y = preprocess_data_and_get_X_and_y(newDataset)
-X_train, X_test, y_train, y_test = partition_into_training_and_testing(X, y, test_size=0.7)
+# Split data into training and testing sets. CHANGE test_size TO 0.2/0.5/0.7 TO GET THE OTHER RESULTS
+X_train, X_test, y_train, y_test = partition_into_training_and_testing(X, y, test_size=0.2)
 
 y_train_format = reformatTargetForSVC(y_train)
 y_test_format = reformatTargetForSVC(y_test)
 
+# Parameters to modify and tune to test for a better model
 param_grid = [
   {'C': [100, 1000, 10000], 
    'gamma': [0.01, 0.001], 
@@ -77,6 +83,7 @@ startTime = datetime.datetime.now()
 gridSearchResults = gridSearchSVC(param_grid, X_train, y_train_format)
 processTime = datetime.datetime.now() - startTime
 
+# Get the best estimator from the GridSearchCV
 best_est = gridSearchResults.best_estimator_
 trainingScore = best_est.score(X_train, y_train_format)
 testingScore = best_est.score(X_test, y_test_format)
