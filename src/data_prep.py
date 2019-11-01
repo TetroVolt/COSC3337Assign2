@@ -9,6 +9,38 @@ import numpy as np
 
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
+from string import Template
+
+def print_statistics(results, test_score):
+  # results is the object returned by GridSearchCV
+
+  output_template = Template(
+  """
+  Grid Search parameter space for Random Forest = $grid_search_params
+  best estimator parameters found = $best_params
+  best estimator mean training score   = $mean_train_score +/- $std_train_score
+  best estimator mean validation score = $mean_validation_score +/- $std_validation_score
+  best estimator test score            = $test_score
+  """)
+
+  train_results = results.cv_results_
+  best_params = results.best_params_
+  param_index = results.cv_results_['params'].index(results.best_params_)
+
+  mean_train_score = results.cv_results_['mean_train_score'][param_index]
+  mean_validation_score = results.cv_results_['mean_test_score'][param_index]
+  std_train_score = results.cv_results_['std_train_score'][param_index]
+  std_validation_score = results.cv_results_['std_test_score'][param_index]
+
+  print(output_template.substitute(
+    grid_search_params=results.param_grid,
+    best_params=best_params,
+    mean_train_score=mean_train_score,
+    mean_validation_score=mean_validation_score,
+    std_train_score=std_train_score,
+    std_validation_score=std_validation_score,
+    test_score=test_score
+  ))
 
 def read_dataset_from_csv(file_name: str):
   return pd.read_csv(file_name)
